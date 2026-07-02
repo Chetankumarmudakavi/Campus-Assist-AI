@@ -1,8 +1,19 @@
-<<<<<<< HEAD
-# Welcome to your Lovable project
+# CampusAssistAI
 
-TODO: Document your project here
-=======
-# Campus-Assist-AI
-AI-powered campus assistant that helps students access academic information, campus resources, schedules, announcements, and support services through an intelligent conversational interface.
->>>>>>> 167d1f4aafdf128b27ba2f243f0a1792992413d3
+An AI-powered virtual campus assistant designed to help students access academic information, schedules, announcements, campus resources, and support services through an intelligent conversational interface.
+
+## Features
+- Student query assistance
+- Academic information access
+- Campus announcements
+- Schedule and timetable support
+- AI-powered responses
+
+## Technologies Used
+- React
+- TypeScript
+- Node.js
+- AI/NLP
+
+## Author
+Chetan Kumar
