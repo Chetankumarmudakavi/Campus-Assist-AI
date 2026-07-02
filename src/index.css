@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Obsidian Pulse design system — all colors HSL */
+
+@layer base {
+  :root {
+    --background: 0 0% 1%;
+    --foreground: 0 0% 96%;
+
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 96%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 96%;
+
+    --primary: 263 85% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 263 90% 70%;
+
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 0 0% 7%;
+    --muted-foreground: 0 0% 55%;
+
+    --accent: 263 60% 20%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 100% / 0.08;
+    --input: 0 0% 100% / 0.06;
+    --ring: 263 85% 58%;
+
+    --radius: 0.875rem;
+
+    --gradient-pulse: radial-gradient(ellipse at top, hsl(263 85% 58% / 0.25), transparent 60%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100% / 0.03), hsl(0 0% 100% / 0.01));
+    --shadow-glow: 0 0 60px -10px hsl(263 85% 58% / 0.5);
+    --shadow-card: 0 8px 32px -12px hsl(0 0% 0% / 0.6), inset 0 1px 0 hsl(0 0% 100% / 0.05);
+
+    --sidebar-background: 0 0% 3%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 263 85% 58%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 8%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 100% / 0.06;
+    --sidebar-ring: 263 85% 58%;
+  }
+
+  /* Light mode (toggle) */
+  .light {
+    --background: 0 0% 99%;
+    --foreground: 0 0% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+    --primary: 263 75% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 263 80% 65%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 12%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 263 60% 95%;
+    --accent-foreground: 263 75% 30%;
+    --destructive: 0 75% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 0% / 0.08;
+    --input: 0 0% 0% / 0.06;
+    --ring: 263 75% 50%;
+    --gradient-pulse: radial-gradient(ellipse at top, hsl(263 75% 50% / 0.15), transparent 60%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 0% / 0.02), hsl(0 0% 0% / 0.01));
+    --shadow-glow: 0 0 60px -10px hsl(263 75% 50% / 0.3);
+    --shadow-card: 0 8px 24px -12px hsl(0 0% 0% / 0.12);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  .font-heading {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  .obsidian-card {
+    background: var(--gradient-card);
+    border: 1px solid hsl(var(--border));
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(20px);
+  }
+
+  .pulse-bg {
+    background-image: var(--gradient-pulse);
+  }
+
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
